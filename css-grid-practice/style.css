@@ -1,0 +1,165 @@
+/*
+* Common Style
+*/
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family: tahoma;
+  font-size: 16px;
+  line-height: 24px;
+  color: #222;
+}
+
+.wrap{
+  width: 100%;
+  max-width: 991px;
+  margin:0 auto;
+  padding: 0px 15px;
+}
+
+.grid-wrap{
+  border: 2px solid #222;
+}
+
+section {
+  padding: 25px 0px;
+}
+
+.example-one .grid-wrap{
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+.example-one .item,
+.example-three .item{
+  background-color: #ddd;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px;
+}
+
+.example-one .item:nth-child(1),
+.example-two .header,
+.example-three .item:nth-child(1){
+  background-color: #bb7bc6;
+}
+
+.example-one .item:nth-child(2),
+.example-two .menu,
+.example-three .item:nth-child(2){
+  background-color: #8f6ad1;
+}
+
+.example-one .item:nth-child(3),
+.example-two .content,
+.example-three .item:nth-child(3){
+  background-color: #70baf5;
+}
+
+.example-one .item:nth-child(4),
+.example-two .footer,
+.example-three .item:nth-child(4){
+  background-color: #89d58c;
+}
+
+.example-one .item:nth-child(5),
+.example-three .item:nth-child(5){
+  background-color: #dcd067;
+}
+
+.example-one .item:nth-child(6),
+.example-three .item:nth-child(6){
+  background-color: #f96d9d;
+}
+
+.example-three .item:nth-child(7){
+  background-color: #8e44ad;
+}
+
+.example-three .item:nth-child(8){
+  background-color: #1abc9c;
+}
+
+.example-three .item:nth-child(9){
+  background-color: #c0392b;
+}
+
+.example-three .item:nth-child(10){
+  background-color: #444;
+}
+
+.example-three .item:nth-child(11){
+  background-color: #7f8c8d;
+}
+
+.example-three .item:nth-child(12){
+  background-color: #2980b9;
+}
+
+
+
+/*
+* Example Two Style
+*/
+.example-two div div{
+  background-color: #ddd;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px;
+}
+.example-two .grid-wrap {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 44px 1fr 44px;
+  min-height: 300px;
+}
+.example-two .header {
+  grid-column: 2 / -1;
+}
+.example-two .menu {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+}
+.example-two .content{
+  grid-column: 2 / -1;
+}
+.example-two .footer {
+  grid-column: 1 / -1;
+}
+
+
+
+/*
+* Example Three Style
+*/
+.example-three .grid-wrap{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 5px;
+}
+.example-three .item{
+  padding: 50px 10px;
+}
+
+
+/*
+* Example Four Style
+*/
+.example-four .grid-wrap {
+  height: 300px;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.example-four .item {
+  background-color: #89d58c;
+  justify-self: center;
+  align-self: center;
+  padding: 4px 10px;
+}

@@ -1,0 +1,136 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #333;
+}
+
+img{
+  display: block;
+  max-width: 100%;
+}
+
+b, strong {
+  font-weight: 600;
+}
+
+.wrap{
+  width: 100%;
+  max-width: 1240px;
+  margin:0 auto;
+  padding: 0 15px;
+}
+
+.btn {
+  display: block;
+  margin: 12px;
+  padding: 12px 10px;
+  text-align: center;
+  background: #ddd;
+  color: #333;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: 0.3s;
+  line-height: 1;
+  font-weight: 600;
+}
+
+.btn:hover{
+  background: #333;
+  color: #fff;
+}
+
+.btn-red{
+  background: #E67E22;
+  color: #fff;
+}
+
+.btn-blue{
+  background: #3500D4;
+  color: #fff;
+}
+
+
+.btn .fa-chevron-right {
+  font-size: 10px;
+  width: 20px;
+  padding: 4px 0px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  margin-left: 5px;
+}
+
+#productTable{
+  padding: 80px 0px;
+}
+
+#productTable ul{
+  margin:0;
+  padding:0;
+}
+
+#productTable ul li {
+  list-style: none;
+  display: grid;
+  grid-template-columns: calc(3 / 12 * 100%) calc(6 / 12 * 100%) calc(3 / 12 * 100%);
+}
+
+#productTable ul li.item {
+  margin: 25px 0;
+  box-shadow: 0px 0px 3px rgb(0 0 0 / 10%);
+  border-radius: 2px;
+}
+
+#productTable ul li.item span.name h3 {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 32px;
+  margin-bottom: 15px;
+}
+
+#productTable ul li.item span.meta {
+  display: grid;
+}
+#productTable ul li.item span.meta > span {
+  margin-bottom: 10px;
+}
+
+#productTable ul li.item span.meta > span b {
+  color: #843FA1;
+}
+
+#productTable ul li.item > span {
+  padding: 15px;
+  display: grid;
+  align-items: center;
+}
+
+#productTable ul li.item > span:last-child {
+  border-right: 0px solid #eee;
+}
+
+span.ratingBox {
+  background: #D5D6E8;
+  border-radius: 50%;
+  text-align: center;
+  padding: 9px 0;
+  width: 70px;
+  margin: auto;
+}
+
+span.ratingBox span.ratingNumber {
+  border: 3px solid #2B348E;
+  border-radius: 50%;
+  width: 52px;
+  display: block;
+  margin: 0 auto;
+  padding: 11px 0;
+  font-weight: 800;
+  color: #2B348E;
+}
