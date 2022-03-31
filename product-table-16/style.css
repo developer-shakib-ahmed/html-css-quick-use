@@ -1,0 +1,118 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #333;
+}
+
+img{
+  display: block;
+  max-width: 100%;
+}
+
+b, strong {
+  font-weight: 600;
+}
+
+.wrap {
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+#prosCons {
+  padding: 80px 0px;
+}
+
+.product {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 30px;
+  padding: 25px;
+}
+
+.product ul li {
+  list-style: none;
+  margin: 15px 0px;
+  font-size: 18px;
+}
+
+.product .pros {
+  border: 5px solid #27AE60;
+  border-radius: 15px;
+  padding: 80px 20px 20px;
+  position: relative;
+}
+
+.product .prosIcon {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.product .prosIcon i.fa {
+  padding: 15px;
+  background: #27ae60;
+  border-radius: 50px;
+  box-shadow: 0px 0px 8px rgb(0 0 0 / 15%);
+  color: #fff;
+  border: 6px solid #fff;
+  font-size: 32px;
+}
+
+.product .prosIcon .title{
+  display: block;
+  font-size: 28px;
+  font-weight: 600;
+  color: #27AE60;
+  margin-top: 8px;
+}
+
+.product li i.fa-check {
+  color: #27AE60;
+}
+
+.product .cons {
+  border: 5px solid #E74C3C;
+  border-radius: 15px;
+  padding: 80px 20px 20px;
+  position: relative;
+}
+.product .consIcon {
+  position: absolute;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.product .consIcon i.fa {
+  padding: 15px;
+  background: #E74C3C;
+  border-radius: 50px;
+  box-shadow: 0px 0px 8px rgb(0 0 0 / 15%);
+  color: #fff;
+  border: 6px solid #fff;
+  font-size: 32px;
+}
+
+.product .consIcon .title{
+  display: block;
+  font-size: 28px;
+  font-weight: 600;
+  color: #E74C3C;
+  margin-top: 8px;
+}
+
+.product li i.fa-xmark {
+  color: #E74C3C;
+}
