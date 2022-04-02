@@ -1,3 +1,7 @@
+/* 
+* Global Style
+*/
+
 *{
   margin:0;
   padding:0;
@@ -27,6 +31,11 @@ b, strong {
   padding: 0 15px;
 }
 
+
+/* 
+* Button Style
+*/
+
 .btn {
   display: block;
   margin: 12px;
@@ -46,16 +55,10 @@ b, strong {
   color: #fff;
 }
 
-.btn-green{
-  background: #1289A7;
+.btn-red{
+  background: #D6363C;
   color: #fff;
 }
-
-.btn-blue{
-  background: #2800C9;
-  color: #fff;
-}
-
 
 .btn .fa-chevron-right {
   font-size: 10px;
@@ -64,6 +67,15 @@ b, strong {
   border: 1px solid #fff;
   border-radius: 50%;
   margin-left: 5px;
+}
+
+
+/* 
+* Product Quick View Style
+*/
+
+#quickView {
+  padding: 80px 0px;
 }
 
 #quickView .badge {
@@ -92,7 +104,7 @@ b, strong {
 
 .product {
   display: grid;
-  grid-template-columns: 1fr 1.5fr;
+  grid-template-columns: 1fr 1fr;
   border: 8px solid #3C78F0;
   box-shadow: 0px 0px 5px #3C78F0;
 }
@@ -103,12 +115,12 @@ b, strong {
 }
 
 .product .details .title {
-  color: #3C78F0;
+  color: #D6363C;
   text-decoration: underline;
 }
 
-#quickView {
-  padding: 80px 0px;
+.product .details .subtitle {
+  margin: 15px 0px 25px;
 }
 
 .product .bookmark {
@@ -125,31 +137,11 @@ b, strong {
   color: #d6363c;
 }
 
-.product .details .button {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 20px;
-}
-
-.product .details .btn{
+.product .details .btn {
   margin-left: 0;
   margin-right: 0;
 }
 
 .product .details p {
-  margin: 15px 0px;
-}
-
-.product .specs {
-  margin-top: 25px;
-}
-
-.product .specs h4 {
-  margin-bottom: 15px;
-  color: #d6363c;
-}
-
-.product .specs ul li {
-  list-style: none;
-  margin-bottom: 5px;
+  margin-bottom: 25px;
 }
