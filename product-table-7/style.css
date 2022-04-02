@@ -1,3 +1,7 @@
+/* 
+* Global Style
+*/
+
 *{
   margin:0;
   padding:0;
@@ -27,6 +31,11 @@ b, strong {
   padding: 0 15px;
 }
 
+
+/* 
+* Button Style
+*/
+
 .btn {
   display: block;
   margin: 12px;
@@ -47,15 +56,14 @@ b, strong {
 }
 
 .btn-red{
-  background: #E67E22;
+  background: #F39C12;
   color: #fff;
 }
 
 .btn-blue{
-  background: #3500D4;
+  background: #005CB3;
   color: #fff;
 }
-
 
 .btn .fa-chevron-right {
   font-size: 10px;
@@ -65,6 +73,11 @@ b, strong {
   border-radius: 50%;
   margin-left: 5px;
 }
+
+
+/* 
+* Product Table Style
+*/
 
 #productTable{
   padding: 80px 0px;
@@ -78,13 +91,40 @@ b, strong {
 #productTable ul li {
   list-style: none;
   display: grid;
-  grid-template-columns: calc(3 / 12 * 100%) calc(6 / 12 * 100%) calc(3 / 12 * 100%);
+  grid-template-columns: calc(3 / 12 * 100%) calc(5 / 12 * 100%) calc(1.5 / 12 * 100%) calc(2.5 / 12 * 100%);
+}
+
+#productTable ul li.item span.img {
+  position: relative;
+}
+
+#productTable ul li.item span.badge {
+  position: absolute;
+  left: 0;
+  top: 12px;
+  z-index: 9;
+  padding: 5px 15px;
+  color: #fff;
+  border: 2px solid #148F77;
+  line-height: 1;
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  background: #148F77;
+}
+
+#productTable ul li.title span {
+  text-align: center;
+  background: #148F77;
+  color: #fff;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 8px;
 }
 
 #productTable ul li.item {
-  margin: 25px 0;
-  box-shadow: 0px 0px 3px rgb(0 0 0 / 10%);
-  border-radius: 2px;
+  border: 1px solid #eee;
+  border-top: 0px solid #eee;
 }
 
 #productTable ul li.item span.name h3 {
@@ -101,8 +141,10 @@ b, strong {
   margin-bottom: 10px;
 }
 
-#productTable ul li.item span.meta > span b {
-  color: #843FA1;
+#productTable ul li.item span.meta > span b i {
+  font-style: normal;
+  font-size: 18px;
+  color: #148F77;
 }
 
 #productTable ul li.item > span {
@@ -115,22 +157,36 @@ b, strong {
   border-right: 0px solid #eee;
 }
 
+#productTable ul li.item span.rating {
+  justify-content: center;
+}
+
 span.ratingBox {
   background: #D5D6E8;
   border-radius: 50%;
   text-align: center;
   padding: 9px 0;
   width: 70px;
-  margin: auto;
+  margin:0 auto;
 }
 
 span.ratingBox span.ratingNumber {
-  border: 3px solid #2B348E;
+  border: 3px solid #148F77;
   border-radius: 50%;
   width: 52px;
   display: block;
   margin: 0 auto;
   padding: 11px 0;
   font-weight: 800;
-  color: #2B348E;
+  color: #148F77;
+}
+
+span.rating-star {
+  font-size: 14px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+span.rating-star i.fa-star{
+  color: #FFC107;
 }
