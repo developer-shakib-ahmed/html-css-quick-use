@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Text Background</title>
+<style type="text/css">
+/*  https://tympanus.net/codrops/2015/02/16/create-animated-text-fills  */
+*{
+    margin:0;
+    padding:0;
+}
+h2 {
+    text-align: center;
+    color: transparent;
+    font-size: 70px;
+    -webkit-text-stroke: 1px #333333;
+    font-family: cursive;
+    margin-top: 20px;
+    text-transform: uppercase;
+}
+div.text-bg {
+    border: 1px solid #ddd;
+    margin: 2%;
+    overflow: hidden;
+    position: absolute;
+    width: 96%;
+    height: 450px;
+    box-sizing: border-box;
+}
+div.text-bg h1 {
+    font-size: 175px;
+    text-align: center;
+    
+    -webkit-background-clip: text;
+    color: transparent;
+
+    background-image: url(../../img/text-gif.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translateX(-50%) translateY(-50%);
+    white-space: nowrap;
+}
+div.box{
+    width:800px;
+    height: 400px;
+    margin: 50px auto 0px;
+    background-image: url(../../img/text.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+div.box h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    font-size: 80px;
+    padding: 25px 0px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.8);
+    mix-blend-mode: overlay;
+    color: #fff;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+}
+</style>
+</head>
+<body>
+
+    <div class="box">
+        <h1>Transparent Text Effects</h1>
+    </div>
+
+    <h2>Text Stroke</h2>
+	<div class="text-bg">
+		<h1>Background Clip</h1>
+	</div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3 CounterUp</title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+			box-sizing: border-box;
+		}
+		body{
+			background-color: #555;
+		}
+		div.wrap {
+		    display: flex;
+		    justify-content: center;
+		    width: 500px;
+		    margin: 20% auto;
+		}
+		span.box {
+		    border: 2px solid #fff;
+		    border-radius: 5px;
+		    font-size: 80px;
+		    margin: 0px 10px;
+		    padding: 0px 15px;
+		    color: #fff;
+		    font-family: fantasy;
+		    overflow: hidden;
+		    display: inline-block;
+		    height: 1.07em;
+		    line-height: 1em;
+		}
+		span.box:after{
+			position: relative;
+			white-space: pre;
+			content: "0\A 1\A 2\A 3\A 4\A 5\A 6\A 7\A 8\A 9\A"
+		}
+		span.box:nth-child(1):after{
+			animation: animate 12.5s steps(10) infinite;
+		}
+		span.box:nth-child(2):after{
+			animation: animate 1.25s steps(10) infinite;
+		}
+		span.box:nth-child(3):after{
+			animation: animate 0.125s steps(10) infinite;
+		}
+
+		@keyframes animate{
+			0%{
+				top:0;
+			}
+			100%{
+				top:-10em;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<span class="box"></span>
+		<span class="box"></span>
+		<span class="box"></span>
+	</div>
+</body>
+</html>

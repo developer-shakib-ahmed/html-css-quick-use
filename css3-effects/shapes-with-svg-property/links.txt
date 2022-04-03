@@ -1,0 +1,7 @@
+https://alistapart.com/article/css-shapes-101
+
+https://css-tricks.com/clipping-masking-css/
+
+https://alligator.io/css/masking-with-mask-image/
+
+https://bennettfeely.com/clippy/

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Shape Testing</title>
+<style type="text/css">
+*{
+	margin:0;
+	padding:0;
+}
+body{
+
+}
+div.container{
+	margin: 0px auto;
+	overflow: hidden;
+	border:5px solid #385DAA;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	background: #555;
+}
+div.shape {
+    width: 173px;
+    height: 100px;
+    background: #f74141;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+div.shape:before,
+div.shape:after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: #f3f757;
+}
+div.shape:before {
+    transform: rotate(60deg);
+}
+div.shape:after {
+    transform: rotate(-60deg);
+}
+div.shape,
+div.shape:before,
+div.shape:after{
+	background-color: transparent;
+	background-color: rgba(28, 102, 255, 0.5);
+	/*border:1px solid #aaa;*/
+	border-left:1px solid #aaa;
+	border-right:1px solid #aaa;
+}
+</style>
+</head>
+<body>
+	<div class="container">
+		<div class="shape"></div>
+	</div>
+</body>
+</html>

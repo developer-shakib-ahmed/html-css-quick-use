@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CSS-Flip</title>
+<style type="text/css">
+*{
+	margin: 0;
+	padding: 0;
+}
+img{
+	width: 100%;
+	display: block;
+}
+div.flip{
+	width: 290px;
+	height: 385px;
+	margin: 30px auto;
+	border: 1px solid #333;
+	position: relative;
+	overflow: hidden;
+	padding: 10px;
+}
+div.flip div.front{
+	position: absolute;
+	transition: transform 0.5s linear 0s;
+	backface-visibility: hidden;
+	transform: perspective(600px) rotateY(0deg);
+}
+
+div.flip:hover div.front{
+	transform: perspective(600px) rotateY(-180deg);
+}
+
+div.flip div.back{
+	position: absolute;
+	transition: transform 0.5s linear 0s;
+	backface-visibility: hidden;
+	transform: perspective(600px) rotateY(180deg);
+}
+
+div.flip:hover div.back{
+	transform: perspective(600px) rotateY(0deg);
+}
+
+</style>
+</head>
+<body>
+	<div class="flip">
+		<div class="front">
+			<img src="../../img/front.png" alt="front-image">
+		</div>
+		<div class="back">
+			<img src="../../img/back.png" alt="back-image">
+		</div>
+	</div>
+</body>
+</html>

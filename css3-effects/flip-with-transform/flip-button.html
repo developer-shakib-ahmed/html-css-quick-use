@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Flip 3D Button</title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+			box-sizing: border-box;
+		}
+		body{
+			margin:0;
+			padding:0;
+			font-family: sans-serif;
+			background-color: #262626;
+		}
+		a.flip-3d-btn{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 200px;
+			height: 60px;
+			text-align: center;
+			transform-style: preserve-3d;
+			perspective: 1000px;
+			transform-origin: center center;
+		}
+		a.flip-3d-btn span{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			display: block;
+			text-align: center;
+			line-height: 60px;
+			font-size: 24px;
+			background-color: rgba(255, 255, 255, 0.05);
+			transform-style: preserve-3d;
+			backface-visibility: hidden;
+			border-radius: 30px;
+			text-transform: uppercase;
+			color: #fff;
+			transition: 1s;
+		}
+		a.flip-3d-btn span.front{
+			transform: rotateX(0deg) translateZ(20px);	
+		}
+		a.flip-3d-btn:hover span.front{
+			transform: rotateX(-180deg) translateZ(20px);	
+		}
+
+		a.flip-3d-btn span.back{
+			transform: rotateX(180deg) translateZ(20px);	
+		}
+		a.flip-3d-btn:hover span.back{
+			transform: rotateX(0deg) translateZ(20px);
+		}
+
+		a.flip-3d-btn span.center{
+			background: linear-gradient(to left, #C51A62, #7129bd);
+		}
+
+		a.flip-3d-btn span.center:before{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(to left, #ffdd1f, #C51A62);
+			border-radius: 30px;
+			transform: translateZ(-1px);
+		}
+		a.flip-3d-btn:hover span.center{
+			transform: rotateX(-180deg) translateZ(0px);
+		}
+	</style>
+</head>
+<body>
+	<a class="flip-3d-btn" href="#"><span class="front">Click</span><span class="center"></span><span class="back">Here</span></a>
+</body>
+</html>

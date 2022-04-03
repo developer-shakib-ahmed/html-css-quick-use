@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3-Card-Hover-Effect</title>
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+			box-sizing: border-box;
+		}
+		body{
+			font-family: tahoma;
+			font-size: 16px;
+			line-height: 24px;
+			background-color: #FFFDFF;
+			color: #333;
+		}
+		div.container{
+			width: 100%;
+			max-width: 1170px;
+			margin: 30px auto;
+		}
+		div.flex-container {
+		    display: flex;
+		    justify-content: space-between;
+		}
+		div.flex-box {
+		    flex: 0 0 32%;
+		    text-align: center;
+		    border-radius: 10px;
+		}
+		div.flex-inner{
+			padding: 15px;
+			position: relative;
+		    min-height: 280px;
+		}
+		div.flex-box div.icon{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: 10px;
+			transition: 0.5s;
+		}
+		div.flex-box:hover div.icon {
+		    width: 80px;
+		    height: 80px;
+		    top: 20px;
+		    left: calc(50% - 40px);
+		    border-radius: 50%;
+		}
+		div.flex-box i.fa {
+		    font-size: 80px;
+		    color: #fff;
+		    position: absolute;
+		    top: 50%;
+		    left: 50%;
+		    transform: translate(-50%, -50%);
+			transition: 0.5s;
+		}
+		div.flex-box:hover i.fa{
+			font-size: 24px;
+		}
+		div.flex-box div.flex-text {
+		    position: absolute;
+		    top: 100%;
+		    width: 100%;
+		    left: 0;
+		    padding: 15px;
+		    transition: 0.5s;
+		}
+		div.flex-box:hover div.flex-text{
+			top: 100px;
+		}
+		div.flex-box h3{
+			color: #fff;
+			margin-bottom: 15px;
+		}
+		div.flex-box p{
+			color: #fff;
+		}
+
+
+		div.flex-box:nth-child(1) {
+			background-color: #4DAF53;
+		}
+		div.flex-box:nth-child(2) {
+			background-color: #F5496A;
+		}
+		div.flex-box:nth-child(3) {
+			background-color: #328FA6;
+		}
+
+		div.flex-box:nth-child(1) div.icon{
+			background-color: #329537;
+		}
+		div.flex-box:nth-child(2) div.icon{
+			background-color: #D13754;
+		}
+		div.flex-box:nth-child(3) div.icon{
+			background-color: #26778F;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="flex-container">
+				<div class="flex-box">
+					<div class="flex-inner">
+						<div class="icon"><i class="fa fa-search"></i></div>
+						<div class="flex-text">
+							<h3>Search</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus iste praesentium id, dolorum fugiat sapiente ipsam quam sunt molestias, nostrum.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="flex-box">
+					<div class="flex-inner">
+						<div class="icon"><i class="fa fa-user"></i></div>
+						<div class="flex-text">
+							<h3>User</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus iste praesentium id, dolorum fugiat sapiente ipsam quam sunt molestias, nostrum.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="flex-box">
+					<div class="flex-inner">
+						<div class="icon"><i class="fa fa-map-marker"></i></div>
+						<div class="flex-text">
+							<h3>Location</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus iste praesentium id, dolorum fugiat sapiente ipsam quam sunt molestias, nostrum.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

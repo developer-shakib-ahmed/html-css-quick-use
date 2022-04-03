@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Hexagon Shape</title>
+<style type="text/css">
+	*{
+		margin:0;
+		padding:0;
+	}
+	img{
+		max-width: 100%;
+	}
+	div.container{
+		width: 1170px;
+		margin: 10px auto;
+		padding: 15px;
+		border:1px solid #ddd;
+	}
+	div.hexagon{
+		width:400px;
+		height: 200px;
+		background: transparent;
+		transform: rotate(120deg);
+		margin: 0px auto;
+		overflow: hidden;
+	}
+	div.hexagon-inside{
+		width: 100%;
+		height: 100%;
+		background: transparent;
+		transform: rotate(-60deg);
+		overflow: hidden;
+	}
+	div.hexagon-image{
+		width: 100%;
+		height: 100%;
+		background: url(../oboyob.jpg) no-repeat center center / cover;
+		transform: rotate(-60deg);
+		overflow: hidden;
+	}
+</style>
+</head>
+<body>
+	<div class="container">
+		<div class="hexagon">
+			<div class="hexagon-inside">
+				<div class="hexagon-image"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

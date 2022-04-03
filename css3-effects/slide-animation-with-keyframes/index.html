@@ -1,0 +1,86 @@
+<!-- 
+	@https://www.carolinaalehouse.com/
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3 Slide Animation</title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+			box-sizing: border-box;
+		}
+		div.box{
+			max-width: 100%;
+			width: 396px;
+			margin: 30px auto;
+			overflow: hidden;
+			text-align: center;
+		}
+		ul{
+			display: block;
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			height: 100%;
+			animation-iteration-count: infinite;
+		}
+		ul li{
+			display: block;
+			margin: 0;
+			padding: 20px;
+			float: left;
+			font-family: tahoma;
+			text-transform: uppercase;
+			background-color: #b7342b;
+			color: #eee;
+			font-size: 22px;
+			letter-spacing: 0.5px;
+		}
+		ul.items-3{
+			width: 300%;
+			animation-name: third-steps;
+			animation-duration: 12s;
+		}
+		ul.items-3 li{
+			width: 33.3333%;
+		}
+
+		@keyframes third-steps{
+			0% {
+			    transform: translateX(0);
+			}
+			28% {
+			    transform: translateX(0);
+			}
+			33% {
+			    transform: translateX(-33.3333%);
+			}
+			61% {
+			    transform: translateX(-33.3333%);
+			}
+			66% {
+			    transform: translateX(-66.6666%);
+			}
+			95% {
+			    transform: translateX(-66.6666%);
+			}
+			100% {
+			    transform: translateX(0);
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<ul class="items-3">
+			<li>CSS3 Slide Animation 1</li>
+			<li>CSS3 Slide Animation 2</li>
+			<li>CSS3 Slide Animation 3</li>
+		</ul>
+	</div>
+</body>
+</html>

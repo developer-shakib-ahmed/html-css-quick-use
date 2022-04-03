@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+			box-sizing: border-box;
+		}
+
+		img{
+			display: block;
+			margin: 0px auto;
+			max-width: 100%;
+		}
+
+		div.shape-1 {
+		    width: 100%;
+		    max-width: 300px;
+		    margin: 20px auto;
+		    position: relative;
+		}
+
+		div.shape-1:before {
+		    content: "";
+		    position: absolute;
+		    top: 0px;
+		    left: 3px;
+		    border: 6px solid #000;
+		    width: 277px;
+		    height: 251px;
+		    z-index: 99;
+		    border-top-left-radius: 53px;
+		    border-top-right-radius: 95px;
+		    border-bottom-left-radius: 46px;
+		    border-bottom-right-radius: 48px;
+		    transform: skewX(0deg) skewY(-3deg);
+		    box-shadow: 8px 13px 0px #bcbbbb;
+		}
+	</style>
+</head>
+<body>
+	<div class="shape-1"></div>
+</body>
+</html>
