@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS3-Shapes</title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+			box-sizing: border-box;
+		}
+			
+		section#one{
+			padding: 50px 0px;
+			background-color: #ececec;
+		}
+
+		div.box{
+			width: 90%;
+			max-width: 1200px;
+			height: 100vh;
+			margin: 0px auto;
+			background-color: #555;
+			position: relative;
+		}
+		div.box:before {
+		    content: '';
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    background-color: lightgreen;
+		    width: 100%;
+		    height: 160px;
+		    clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
+		}
+		div.box:after {
+		    content: '';
+		    position: absolute;
+		    bottom: 0;
+		    right: -1px;
+		    background-color: lightgreen;
+		    width: 100%;
+		    height: 150px;
+		    clip-path: polygon(0% 100%, 100% 0%, 100% 100%);
+		}
+
+		div.box_top{
+			background-color: lightgreen;
+			width: 90%;
+			max-width: 1200px;
+			min-height: 100vh;
+			margin: 0px auto;
+			position: relative;
+			overflow: hidden;
+			padding: 20px;
+		}
+
+		div.box_bottom{
+			background-color: lightgreen;
+			width: 90%;
+			max-width: 1200px;
+			min-height: 100vh;
+			margin: 0px auto;
+			position: relative;
+			overflow: hidden;
+		}
+
+		div.leaf-shaped-element {
+		    float: left;
+		    width: 60%;
+		    border: 1px solid red;
+		    padding: 20px;
+		}
+		div.leaf-shaped-element p {
+		    font-size: 17px;
+		    line-height: 1.5;
+		    margin-left: 100px;
+		    text-align: justify;
+		}
+
+		div.first {
+		    width: 210px;
+		    background-image: url(https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+		    background-repeat: no-repeat;
+		    background-size: cover;
+		    background-position: center center;
+		    -webkit-mask-image: url(leaf.png);
+		    mask-image: url(leaf.png);
+		    height: 360px;
+		    float: left;
+		    -webkit-shape-outside: polygon(55% 8%, 64% 18%, 80% 29%, 100% 43%, 99% 57%, 86% 70%, 64% 81%, 52% 99%, 35% 100%, 58% 0%);
+		    -webkit-shape-margin: 3px;
+		}
+
+		div.text {
+			float: left;
+		    width: 38%;
+		    margin-left: 2%;
+		    font-size: 16px;
+		    font-family: arial;
+		    line-height: 1.7;
+		    padding: 15px;
+		    border: 1px solid;
+		    text-align: justify;
+		}
+
+		div.shape {
+		    width: 320px;
+		    height: 275px;
+		    background-color: #666;
+		    float: left;
+		    -webkit-shape-outside: polygon(0% 55%, 28% 1%, 93% 56%);
+		    -webkit-shape-margin: 8px;
+		    clip-path: polygon(0% 55%, 28% 1%, 93% 56%);
+		}
+
+	</style>
+</head>
+<body>
+	<section id="one">
+		<div class="box_top">
+			<div class="leaf-shaped-element">
+				<div class="first"></div>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo repudiandae qui quos nihil exercitationem inventore libero. Illum numquam iste consequatur nesciunt vel in aspernatur, eos officiis repellat quod a sequi omnis enim odit at eaque ullam iusto delectus placeat. Veritatis magnam commodi, laboriosam maiores! Aliquid cupiditate quia ad ex odio esse quisquam possimus, officiis amet, placeat molestias, vero consectetur commodi, culpa modi ipsam eaque cumque nobis sapiente officia labore ducimus? Necessitatibus laboriosam eveniet quibusdam porro beatae, quam ipsam inventore omnis! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo repudiandae qui quos nihil exercitationem inventore libero. Illum numquam iste consequatur nesciunt vel in aspernatur, eos officiis repellat quod a sequi omnis enim odit at eaque.</p>
+			</div>
+			<div class="text">
+				<div class="shape"></div>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo repudiandae qui quos nihil exercitationem inventore libero. Illum numquam iste consequatur nesciunt vel in aspernatur, eos officiis repellat quod a sequi omnis enim odit at eaque ullam iusto delectus placeat. Veritatis magnam commodi, laboriosam maiores! Aliquid cupiditate quia ad ex odio esse quisquam possimus, officiis amet, placeat molestias, vero consectetur commodi, culpa modi ipsam eaque cumque nobis sapiente officia labore ducimus? Necessitatibus laboriosam eveniet quibusdam porro beatae, quam ipsam inventore omnis! Aliquid cupiditate</p>
+			</div>
+		</div>
+		<div class="box"></div>
+		<div class="box_bottom"></div>
+	</section>
+</body>
+</html>

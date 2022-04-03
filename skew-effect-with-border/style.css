@@ -1,0 +1,76 @@
+*{
+	margin:0;
+	padding:0;
+    box-sizing: border-box;
+}
+
+body{
+	background: #8a8a8a;
+	font-family: arial;
+	font-size: 17px;
+	line-height: 24px;
+}
+
+section#one{
+	width: 100%;
+	height: 400px;
+	position: absolute;
+	top: 50%;
+	left:0;
+	transform: translateY(-50%);
+}
+
+section#one div.container{
+	box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.5);
+	max-width: 1170px;
+	margin: 0px auto;
+	width: 100%;
+	height: 100%;
+}
+
+section#one div.left {
+    background: #789;
+    width: calc( 50% - 50px );
+    height: 100%;
+    float: left;
+    color: #fff;
+    position: relative;
+}
+
+section#one div.left div.txt {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    padding-left: 30px;
+}
+
+section#one div.left h1 {
+    margin-bottom: 20px;
+    font-size: 31px;
+}
+
+section#one div.right {
+    background-image: url(https://images.pexels.com/photos/2662116/pexels-photo-2662116.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    width: calc( 50% + 50px );
+    height: 100%;
+    float: left;
+    position: relative;
+}
+
+section#one div.right:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-left: 100px solid #789;
+    border-bottom: 400px solid transparent;
+    box-sizing: border-box;
+}

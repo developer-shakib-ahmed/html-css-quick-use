@@ -1,0 +1,183 @@
+*{
+	margin:0;
+	padding:0;
+}
+
+
+div.box{
+	width:400px;
+	height:300px;
+	margin: 30px auto;
+	overflow: hidden;
+}
+div.wrap{
+	width:400px;
+	height:300px;
+	background: url(item06.jpg) no-repeat;
+	margin: 0px auto;
+	position: relative;	
+	transition: all 0.3s ease 0s;
+}
+div.wrap:hover{
+	transform: rotate(10deg) scale(1.3);
+	transition: all 0.5s ease 0s;
+}
+div.inner{
+	background: rgba(0, 0, 0, 0.5);
+	width:100%;
+	height:100%;
+	opacity: 0;
+	transition: all 0.6s ease 0s;
+}
+div.wrap:hover div.inner{
+	opacity: 1;
+}
+
+
+
+div.box1{
+	width:400px;
+	height:300px;
+	margin: 30px auto;
+	overflow: hidden;
+}
+div.wrap1{
+	width:400px;
+	height:300px;
+	background: url(item01.jpg) no-repeat;
+	margin: 0px auto;
+	position: relative;	
+	transition: all 0.3s ease 0s;
+}
+div.wrap1:hover{
+	transform: rotate(360deg);
+	transition: all 0.8s ease 0s;
+}	
+div.inner1{
+	background: rgba(0, 0, 0, 0.5);
+	width:100%;
+	height:100%;
+	opacity: 0;
+	transition: all 0.6s ease 0s;
+}
+div.wrap1:hover div.inner1{
+	opacity: 1;
+}
+
+
+
+div.fourBox{
+	overflow: hidden;
+	margin: 30px auto;
+}
+div.fourBox div.wrap2,div.fourBox div.wrap3,div.fourBox div.wrap4,div.fourBox div.wrap5{
+	float: left;
+	margin-left: 10px;
+}
+
+div.wrap2{
+	width:325px;
+	height:250px;
+	background: url(item04.jpg) no-repeat;
+	background-size: cover;
+	margin: 0px auto;
+	position: relative;
+}	
+div.inner2{
+	background: rgba(0, 0, 0, 0.5);
+	width:100%;
+	height:0px;
+	opacity: 0;
+	position: absolute;
+	bottom: 0;
+	left:0;
+	transform: translateY(5px);
+	transition: all 0.4s  cubic-bezier(0.88,-0.99, 0, 1.81);
+
+
+
+}
+div.wrap2:hover div.inner2{
+	opacity: 1;
+	height:100px;
+}
+
+
+
+
+
+
+
+div.wrap3{
+	width:325px;
+	height:250px;
+	background: url(item04.jpg) no-repeat;
+	background-size: cover;
+	margin: 0px auto;
+	position: relative;
+}	
+div.inner3{
+	background: rgba(0, 0, 0, 0.5);
+	width:100%;
+	height:0px;
+	opacity: 0;
+	transition: all 0.4s ease 0s;
+	position: absolute;
+	top: 0;
+	left:0;
+}
+div.wrap3:hover div.inner3{
+	opacity: 1;
+	height:100px;
+}
+
+
+
+div.wrap4{
+	width:325px;
+	height:250px;
+	background: url(item04.jpg) no-repeat;
+	background-size: cover;
+	margin: 0px auto;
+	position: relative;
+}	
+div.inner4{
+	background: rgba(0, 0, 0, 0.5);
+	width:0;
+	height:100%;
+	opacity: 0;
+	transition: all 0.4s ease 0s;
+	position: absolute;
+	top: 0;
+	left:0;
+}
+div.wrap4:hover div.inner4{
+	opacity: 1;
+	width:100px;
+}
+
+
+
+
+div.wrap5{
+	width:325px;
+	height:250px;
+	background: url(item04.jpg) no-repeat;
+	background-size: cover;
+	margin: 0px auto;
+	position: relative;
+}
+div.inner5{
+	background: rgba(0, 0, 0, 0.5);
+	width:0;
+	height:100%;
+	opacity: 0;
+	transition: all 0.4s ease 0s;
+	position: absolute;
+	top: 0;
+	right:0;
+}
+div.wrap5:hover div.inner5{
+	opacity: 1;
+	width:100px;
+}

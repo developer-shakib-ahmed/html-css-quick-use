@@ -1,0 +1,30 @@
+<!-- https://css-tricks.com/almanac/properties/b/box-shadow/ -->
+
+<!-- https://html-css-js.com/css/generator/box-shadow/ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Box Shadow</title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+			box-sizing: border-box;
+		}
+		div.box{
+			width: 100px;
+			height: 100px;
+			margin: 100px auto;
+			border-radius: 50%;
+			border: 1px solid #000;
+
+			box-shadow: inset 7px -5px 10px 0px #4B0082, inset 11px -9px 10px 0px #0000FF, inset 16px -14px 10px 0px #00FF00, inset 20px -17px 10px 0px #FFFF00, inset 24px -19px 10px 0px #FF7F00, inset 27px -23px 10px 0px #FF0000, inset 5px 5px 15px 5px rgba(0,0,0,0);
+		}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+</body>
+</html>

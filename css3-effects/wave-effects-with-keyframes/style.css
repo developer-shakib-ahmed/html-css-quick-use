@@ -1,0 +1,68 @@
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	font-family: arial;
+	font-size: 16px;
+	line-height: 26px;
+	color:#333;
+	background: #fff;
+}
+div#banner{
+	margin-bottom: 35px;
+	height:222px;
+	width:100%;
+	background: #fbfbfb url(ocean-wave.png);
+	background-repeat: repeat-x;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	animation: banner linear 20s infinite;
+}
+@keyframes banner{
+
+	from{background-position: 0px 0px;}
+	
+	to{background-position: -594px 0px;}
+
+}
+
+
+
+div#banner2{
+	margin-bottom: 35px;
+	height:222px;
+	width:100%;
+	background: #fbfbfb url(ocean-wave.png);
+	background-repeat: repeat-x;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	animation: banner2 linear 50s infinite;
+}
+@keyframes banner2{
+
+	from{background-position: 0px 0px;}
+
+	to{background-position: 594px 0px;}
+
+}
+
+
+
+div#banner3{
+	margin-bottom: 35px;
+	height:222px;
+	width:100%;
+	background: #fbfbfb url(ocean-wave.png);
+	background-repeat: repeat;
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	animation: banner3 linear 30s infinite;
+}
+@keyframes banner3{
+
+	from{background-position: 0px 0px;}
+
+	to{background-position: -594px -600px;}
+
+}

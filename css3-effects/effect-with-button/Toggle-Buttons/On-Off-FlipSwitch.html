@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+	<title>On/Off FlipSwitch</title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+			box-sizing: border-box;
+		}
+		body{
+			line-height: 22px;
+			font-size: 14px;
+			color: #333;
+			font-family: tahoma, Arial, sans-serif; font-weight: bold;
+			height: 100vh;
+		}
+		.onoffswitch {
+		    position: relative;
+		    width: 72px;
+		    margin: 0 auto;
+		    top: 50%;
+		    transform: translateY(-50%);
+		}
+		.onoffswitch-checkbox {
+		    display: none;
+		}
+		.onoffswitch-label {
+		    display: block;
+		    overflow: hidden;
+		    cursor: pointer;
+		    border-radius: 20px;
+		    outline: none;
+		}
+		.onoffswitch-inner {
+		    display: block; width: 200%; margin-left: -100%;
+		    transition: margin 0.3s ease-in 0s;
+		}
+		.onoffswitch-inner:before, .onoffswitch-inner:after {
+		    display: block;
+			float: left;
+			width: 50%;
+			height: 32px;
+			padding: 0;
+			box-sizing: border-box;
+			line-height: 32px;
+		}
+		.onoffswitch-inner:before {
+		    content: "ON";
+		    padding-left: 10px;
+		    background-color: #ff5800;
+		    color: #FFFFFF;
+		    box-shadow: inset 0px 1px 15px 3px rgba(0, 0, 0, 0.15);
+		}
+		.onoffswitch-inner:after {
+		    content: "OFF";
+		    padding-right: 10px;
+		    color: #fff;
+		    text-align: right;
+		    box-shadow: inset 0px 0px 15px 4px rgba(93,94,94,.25);
+		    background: #c7c4c4;
+		}
+		.onoffswitch-switch {
+		    display: block;
+		    width: 22px;
+		    margin: 5px;
+		    background: #FFFFFF;
+		    position: absolute;
+		    top: 0;
+		    bottom: 0;
+		    right: 38px;
+		    border-radius: 50%;
+		    transition: all 0.3s ease-in 0s;
+		    box-shadow: 0 2px 0 rgba(93,94,94,.25);
+		}
+		.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+		    margin-left: 0;
+		}
+		.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+		    right: 0px; 
+		}
+	</style>
+</head>
+<body>
+	<div class="onoffswitch">
+		<input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" >
+		<label class="onoffswitch-label" for="myonoffswitch">
+			<span class="onoffswitch-inner"></span><span class="onoffswitch-switch"></span>
+		</label>
+	</div>
+</body>
+</html>

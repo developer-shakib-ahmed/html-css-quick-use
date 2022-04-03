@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+	<title>Sleek Checkbox</title>
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+	<style type="text/css">
+		*{margin:0;padding:0;box-sizing: border-box;}
+		body{font-family: 'Ubuntu', tahoma, sans-serif;font-size: 16px;line-height: 22px;background-color: #ececec;height: 100vh;}
+		div.wrap{width: 100%;max-width: 600px;margin: 0 auto;text-align: center;}
+		section.title {padding: 0 15px;}
+		section.title div.title-content {background: #fbfbfb;padding: 15px;border-radius: 5px;box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);margin-top: 15px;}
+		section.title div.title-content h1 {color: #ff5800;}
+		section.title div.title-content h1 span {display: block;font-weight: normal;font-size: 16px;margin-top: 5px;color: #000;}
+		section.relays {padding: 15px;}
+		section.relays div.relay {display: flex;flex-wrap: nowrap;justify-content: space-between;align-items: center;background: #fbfbfb;padding: 15px 35px;border-radius: 5px;box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);margin-bottom: 15px;}
+		section.relays div.relay:last-child{margin-bottom: 0;}
+		section.relays div.label {font-weight: bold;font-size: 22px;line-height: 1.4;}
+		section.relays div.checkbox{position: relative;height: 50px;width: 100px;border-radius: 50px;background: linear-gradient(0deg, #d8d8d8, #ccc);border-top: 0.02em solid #ececec;border-bottom: 0.02em solid #ececec;}
+		section.relays div.checkbox div.inner{position: absolute;top: 10px;left: 10px;right: 10px;bottom: 10px;background: linear-gradient(0deg, #a5a5a5, #717171);border-radius: 20px;box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.5);}
+		section.relays div.checkbox div.inner div.toggle{position: absolute;top: -3px;left: -3px;width: 36px;height: 36px;border-radius: 50%;background: linear-gradient(0deg, #ccc, #e4e4e4);box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);box-sizing: border-box;border-top: 0.04em solid #ececec;border-top: 0.01em solid #ececec;transition: 0.5s;cursor: pointer;}
+		section.relays div.checkbox div.inner div.toggle:before{content: "OFF";position: absolute;top: 4px;left: 4px;right: 4px;bottom: 4px;background: linear-gradient(0deg, #e4e4e4, #ccc);border-radius: 50%;text-align: center;font-size: 10px;line-height: 28px;color: #a9a9a9;}
+		section.relays div.checkbox div.inner.active div.toggle{left: 47px;}
+		section.relays div.checkbox div.inner.active div.toggle:before{content: "ON";color: #000;}
+		section.relays div.checkbox div.inner.active{background: linear-gradient(0deg, #00d22d, #158a00);}
+		section.relays div.fan-speed {display: none;}
+		section.relays div.fan-speed.active {display: block;}
+		section.relays div.relay span#speed-value {border-radius: 25px;font-weight: bold;font-size: 22px;line-height: 1.4;color: #000;background: linear-gradient(0deg, #d8d8d8, #ccc);border-top: 0.02em solid #ececec;border-bottom: 0.02em solid #ececec;flex: 0 0 100px;padding: 10px 0px;position: relative;}
+		section.relays div.relay span#speed-value:before {content: attr(value);position: absolute;top: 10px;bottom: 10px;left: 10px;right: 10px;width: auto;background: linear-gradient(0deg, #00d22d, #158a00);border-radius: 21px;font-size: 16px;line-height: 30px;box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.5);color: #efefef;}
+		section.relays div.fan-speed div.label {display: flex;justify-content: space-between;align-items: center;}
+		section.relays div.fan-speed div.spead-wrap {position: relative;margin: 20px 0px 15px;}
+		section.relays div.relay input#fanSpeed {display: block;width: 100%;height: 2px;-webkit-appearance: none;border-radius: 0px;background: #158a00;margin-left: auto;outline: none;}
+		section.relays div.relay input#fanSpeed::-webkit-slider-thumb{-webkit-appearance: none;width: 12px;height: 12px;background: #158a00;border-radius: 50%;cursor: pointer;outline: none;position: relative;z-index: 1;transition: 0.2s;box-shadow: 0 0 0 8px rgba(21, 138, 0, 0.15);}
+		section.relays div.relay input#fanSpeed::-webkit-slider-thumb:focus, section.relays div.relay input#fanSpeed::-webkit-slider-thumb:hover, section.relays div.relay input#fanSpeed:active::-webkit-slider-thumb{}
+	</style>
+</head>
+<body>
+<section class="title">
+	<div class="wrap">
+		<div class="title-content">
+			<h1>Unique Robotics <span>Smart Home Dashboard</span></h1>
+		</div>
+	</div>
+</section>
+
+	<section class="relays">
+		<div class="wrap">
+			<div class="relay relay1">
+				<div class="label"><span>Light 1</span></div>
+				<div class="checkbox"><div class="inner"><div onclick="relayToggle(this)" class="toggle"></div></div></div>
+			</div>
+
+			<div class="relay relay2">
+				<div class="label"><span>Light 2</span></div>
+				<div class="checkbox"><div class="inner"><div onclick="relayToggle(this)" class="toggle"></div></div></div>
+			</div>
+
+			<div class="relay relay3">
+				<div class="label"><span>Light 3</span></div>
+				<div class="checkbox"><div class="inner"><div onclick="relayToggle(this)" class="toggle"></div></div></div>
+			</div>
+
+			<div class="relay relay4">
+				<div class="label"><span>Fan</span></div>
+				<div class="checkbox"><div class="inner"><div onclick="relayToggle(this)" class="toggle"></div></div></div>
+			</div>
+
+			<div class="relay fan-speed">
+				<div class="label">
+					<span>Fan Speed</span>
+					<span id="speed-value" value="">.</span>
+				</div>
+				<div class="spead-wrap">
+					<input type="range" min="0" max="100" value="10" id="fanSpeed">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script type="text/javascript">
+		function relayToggle(element){
+			element.parentNode.classList.toggle('active');
+			if(element.closest('.relay4')){document.querySelector('section.relays div.fan-speed').classList.toggle('active');}
+		}
+		var fanSpeed = document.getElementById("fanSpeed");
+		var speedValue = document.getElementById("speed-value");
+		speedValue.setAttribute("value", fanSpeed.value + "%");
+		fanSpeed.oninput=function(){ speedValue.setAttribute("value", this.value + "%"); };
+	</script>
+</body>
+</html>
