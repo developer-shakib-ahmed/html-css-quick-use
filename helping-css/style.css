@@ -1,0 +1,106 @@
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: pink;
+}
+input::-moz-placeholder,
+textarea::-webkit-input-placeholder { /* Firefox 19+ */
+  color: pink;
+}
+input:-ms-input-placeholder,
+textarea::-webkit-input-placeholder { /* IE 10+ */
+  color: pink;
+}
+
+
+
+select[class*="chosen-select-"]{
+  
+}
+
+
+
+@font-face {
+  font-family: CerebriSans;
+  src: url(CerebriSans-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: CerebriSans;
+  src: url(CerebriSans-SemiBold.ttf);
+  font-weight: 600;
+}
+
+/* China Font Control */
+P{
+  font-family: arial, 微軟正黑體;
+}
+
+
+/* iframe responsive css here */
+
+div.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+div.embed-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* This CSS for small Mobile*/
+@media only screen and (max-width: 767px) {
+
+
+
+}
+
+
+
+/* This CSS for Tablet */
+@media only screen and (min-width: 768px) {
+
+
+
+}
+
+
+
+/* This CSS for Medium Devices */
+@media only screen and (min-width: 992px) {
+
+
+
+}
+
+
+
+/* This CSS for Custom made frame */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+
+
+
+
+}
+
+
+
+/* This CSS for Large Devices */
+@media only screen and (min-width: 1200px) {
+
+
+
+}
