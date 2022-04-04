@@ -1,0 +1,74 @@
+{
+	/*
+		flex-grow = meaning as bootstrap row
+	*/
+}
+
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+body{
+	font-family: tahoma, arial;
+	font-size: 16px;
+	line-height: 24px;
+	background: #fbfbfb;
+	color:#333;
+}
+img{
+	display: block;
+	max-width: 100%;
+}
+div.container{
+	width: 100%;
+	max-width: 1280px;
+	margin: 0px auto;
+}
+h1{
+	color:#357;
+	font-size: 32px;
+	line-height: 42px;
+}
+
+section{
+	padding: 40px 0px;
+	margin: 40px 0px;
+	border: 1px solid #D4000E;
+}
+
+div.container-inner{
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	padding: 0px 15px;
+}
+
+div.box{
+	height: 150px;
+	width: 100px;
+}
+
+section#one div.box-1{
+	background-color: #40A9FF;
+	flex-grow: 2;
+}
+section#one div.box-2{
+	background-color: #4CB050;
+	flex-grow: 4;
+}
+section#one div.box-3{
+	background-color: #FF9800;
+	flex-grow: 6;
+}
+
+section#two div.box-1{
+	background-color: #be000c;
+	flex: 1 50 75%;
+}
+section#two div.box-2{
+	background-color: #fb8c00;
+    flex: 1 1 320px;
+}

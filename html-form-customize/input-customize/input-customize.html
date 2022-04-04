@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Input - Customize</title>
+<style type="text/css">
+h1{
+	font-size: 80px;
+	line-height: 1;
+	text-align: center;
+	color:#876;
+	margin-bottom: 35px;
+}
+form{
+    width: 150px;
+    box-shadow: 0 0px 2px rgba(0,0,0,.1);  
+    margin: 0px auto; 
+    padding: 10px;
+}
+form label{
+	display: block;
+	margin-bottom: 10px;
+	outline: 0;
+}
+form select{
+	margin-top: 10px;
+}
+
+input[type="radio"] {
+    border: 1px solid #b4b9be;
+    background: #fff;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    outline: 0;
+    padding: 0;
+    -webkit-appearance: none;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+    transition: 0.3s border-color ease-in-out;
+    margin: 0;
+    position: relative;
+    top: 3px;
+}
+input[type="radio"]:focus, input#checkbox:focus{
+	box-shadow: 0px 0px 2px #1e8cbe;
+}
+input[type="radio"]:checked:before {
+    content: "\2022";
+    display: block;
+    font-size: 24px;
+    text-align: center;
+    color: #1e8cbe;
+    line-height: 14.5px;
+}
+input#checkbox {
+    border: 1px solid #b4b9be;
+    background: #fff;
+    height: 19px;
+    width: 19px;
+    border-radius: 0;
+    outline: 0;
+    padding: 0;
+    -webkit-appearance: none;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+    transition: 0.3s border-color ease-in-out;
+    display: inline-block;
+    text-align: center;
+    margin: 0;
+    position: relative;
+    top: 4px;
+}
+input#checkbox:checked:before {
+    content: "\2713";
+    display: inline-block;
+    border-radius: 0;
+    font-size: 14px;
+    text-align: center;
+    background-color: transparent;
+    line-height: 1.4;
+    color: #1e8cbe;
+    font-weight: bold;
+    position: absolute;
+    left: 3px;
+}
+
+select{
+
+}
+
+input#my-file {
+    display: none;
+}
+label.input-file-trigger {
+    margin: 20px 0 0;
+    background: #876;
+    color: #fff;
+    text-align: center;
+    padding: 15px 10px;
+    cursor: pointer;
+}
+p.file-return {
+    font-style: italic;
+    font-weight: 600;
+    color: #777;
+    font-family: tahoma;
+    font-size: 12px;
+}
+p.file-return:not(:empty):before {
+    content: "Selected file: ";
+    font-style: normal;
+    font-weight: normal;
+}
+
+</style>
+</head>
+<body>
+	<h1>&bull; Input Customize &#10004;</h1>
+	<form action="">
+		<label for="mele"><input type="radio" name="radio" id="mele" checked> Male</label>
+		<label for="female"><input type="radio" name="radio" id="female"> Female</label>
+		<label for="checkbox"><input type="checkbox" name="checkbox" id="checkbox"> I Agree</label>
+		<select name="select" id="select">
+			<option value="">Option One</option>
+			<option value="">Option Two</option>
+			<option value="">Option Three</option>
+		</select>
+
+        <input class="input-file" id="my-file" type="file">
+        <label for="my-file" class="input-file-trigger">Select a file...</label>
+        <p class="file-return"></p>
+	</form>
+
+    <script type="text/javascript">
+        if( jQuery('body').hasClass('page-id-873') ){
+            var fileInput  = document.querySelector( ".input-file" ),  
+                button     = document.querySelector( ".input-file-trigger" ),
+                the_return = document.querySelector(".file-return");
+
+            button.addEventListener( "keydown", function( event ) {  
+                if ( event.keyCode == 13 || event.keyCode == 32 ) {  
+                    fileInput.focus();  
+                }  
+            });
+            button.addEventListener( "click", function( event ) {
+               fileInput.focus();
+               return false;
+            });
+            fileInput.addEventListener( "change", function( event ) {  
+                var fullPath = this.value;
+                if (fullPath) {
+                    var startIndex = (fullPath.indexOf('\\') >= 0 ? fullPath.lastIndexOf('\\') : fullPath.lastIndexOf('/'));
+                    var filename = fullPath.substring(startIndex);
+                    if (filename.indexOf('\\') === 0 || filename.indexOf('/') === 0) {
+                        filename = filename.substring(1);
+                    }
+                    the_return.innerHTML = filename;  
+                }
+                
+            });
+        }
+    </script>
+</body>
+</html>

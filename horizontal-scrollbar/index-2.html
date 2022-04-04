@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Horizontal Scroll</title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+			box-sizing: border-box;
+		}
+
+		body{
+			font-family: arial;
+			color: #333;
+			font-size: 16px;
+			line-height: 22px;
+			height: 100vh;
+		}
+
+		div.preview_area {
+		    height: 100%;
+		    padding-top: 16px;
+		}
+
+		div.previews {
+		    display: flex;
+		    flex-wrap: nowrap;
+		    overflow-x: scroll;
+		    overflow-y: hidden;
+		    height: 100%;
+		}
+
+		div.preview {
+		    margin: 0 1rem 0 0;
+		    padding-bottom: 20px;
+		}
+
+		div.img{
+
+		}
+
+		div.img img{
+			display: block;
+			height: calc(100vh - 3rem - 24px - .5rem);
+		}
+
+		div.info {
+		    text-align: center;
+		    margin-top: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="preview_area">
+		<div class="previews">
+			<div class="preview">
+				<div class="img">
+					<img src="https://ridikkuluz.com/wp-content/uploads/2020/05/IMG_3517-1024x614.jpg" alt="">
+				</div>
+				<div class="info">
+					<p>Title goes here</p>
+				</div>
+			</div>
+			<div class="preview">
+				<div class="img">
+					<img src="https://ridikkuluz.com/wp-content/uploads/2019/08/ridikkuluz-2016-11.png" alt="">
+				</div>
+				<div class="info">
+					<p>Title goes here</p>
+				</div>
+			</div>
+			<div class="preview">
+				<div class="img">
+					<img src="https://ridikkuluz.com/wp-content/uploads/2019/08/ridikkuluz-2016-7.png" alt="">
+				</div>
+				<div class="info">
+					<p>Title goes here</p>
+				</div>
+			</div>
+			<div class="preview">
+				<div class="img">
+					<img src="https://ridikkuluz.com/wp-content/uploads/2019/08/ridikkuluz-2016-5.png" alt="">
+				</div>
+				<div class="info">
+					<p>Title goes here</p>
+				</div>
+			</div>
+			<div class="preview">
+				<div class="img">
+					<img src="https://ridikkuluz.com/wp-content/uploads/2019/08/ridikkuluz-2015-7.png" alt="">
+				</div>
+				<div class="info">
+					<p>Title goes here</p>
+				</div>
+			</div>
+			<div class="preview">
+				<div class="img">
+					<img src="https://ridikkuluz.com/wp-content/uploads/2019/08/ridikkuluz-2015-9.png" alt="">
+				</div>
+				<div class="info">
+					<p>Title goes here</p>
+				</div>
+			</div>
+			<div class="preview">
+				<div class="img">
+					<img src="https://ridikkuluz.com/wp-content/uploads/2020/05/Ridikkuluz_Samer_8-737x1024.jpg" alt="">
+				</div>
+				<div class="info">
+					<p>Title goes here</p>
+				</div>
+			</div>
+			<div class="preview">
+				<div class="img">
+					<img src="https://ridikkuluz.com/wp-content/uploads/2019/08/ridikkuluz-earlier-works-5.png" alt="">
+				</div>
+				<div class="info">
+					<p>Title goes here</p>
+				</div>
+			</div>
+			<div class="preview">
+				<div class="img">
+					<img src="https://ridikkuluz.com/wp-content/uploads/2019/08/ridikkuluz-earlier-works-6.png" alt="">
+				</div>
+				<div class="info">
+					<p>Title goes here</p>
+				</div>
+			</div>
+			<div class="preview">
+				<div class="img">
+					<img src="https://ridikkuluz.com/wp-content/uploads/2019/08/ridikkuluz-earlier-works-1.png" alt="">
+				</div>
+				<div class="info">
+					<p>Title goes here</p>
+				</div>
+			</div>
+			<div class="preview">
+				<div class="img">
+					<img src="https://ridikkuluz.com/wp-content/uploads/2020/05/A85A0C45-0DB3-4843-BC99-572456FFD130-562x1024.jpg" alt="">
+				</div>
+				<div class="info">
+					<p>Title goes here</p>
+				</div>
+			</div>
+			<div class="preview">
+				<div class="img">
+					<img src="https://ridikkuluz.com/wp-content/uploads/2020/05/Gottem-Ridikkuluz-683x1024.jpg" alt="">
+				</div>
+				<div class="info">
+					<p>Title goes here</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

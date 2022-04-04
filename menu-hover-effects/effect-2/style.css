@@ -1,0 +1,58 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+body{
+	font-family: tahoma;
+	font-size: 16px;
+	line-height: 24px;
+	color: #333;
+	background-color: #fbfbfb;
+}
+header{
+	background-color: #444;
+}
+div.container{
+	width: 100%;
+	max-width: 1170px;
+	overflow: hidden;
+	display: block;
+	margin: 0px auto;
+}
+ul{
+	margin:0;
+	padding:0;
+}
+ul li{
+	float: left;
+	list-style: none;
+}
+ul li a {
+    display: block;
+    padding: 10px 0px;
+    color: #ddd;
+    text-decoration: none;
+    transition: 0.2s;
+    position: relative;
+    margin-right: 30px;
+}
+ul li a:after{
+	content:'';
+	position: absolute;
+	bottom:2px;
+	right:0;
+	left:auto;
+	width:0;
+	height: 2px;
+	background-color: #fff;
+    transition: 0.2s;
+}
+ul li a:hover{
+	color:#fff;
+}
+ul li a:hover:after{
+	width: 100%;
+	right:auto;
+	left:0;
+}
