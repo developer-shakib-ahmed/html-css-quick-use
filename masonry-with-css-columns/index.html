@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+	<title>Masonry Grid Layouts</title>
+	<link href="https://fonts.googleapis.com/css?family=Oxygen:400,700" rel="stylesheet">
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+			box-sizing: border-box;
+		}
+		body{
+			font-family: 'Oxygen', sans-serif;
+			background-color: #fff;
+			color: #333;
+			font-size: 16px;
+			line-height: 22px;
+		}
+		section.grid{
+			background: #cecece;
+			padding: 70px 0px;
+		}
+		h1{
+			text-align: center;
+			font-size: 45px;
+			line-height: 60px;
+			margin-bottom: 20px;
+		}
+		div.container{
+			width: 100%;
+			padding: 0px 15px;
+			margin: 0px auto;
+			column-gap: 20px;
+		}
+		div.box{
+			background-color: #fff;
+			width: 100%;
+			margin:0 0 20px;
+			overflow: hidden;
+			padding: 10px;
+			break-inside: avoid;
+		}
+		div.box img{
+			display: block;
+			max-width: 100%;
+			margin: 0px auto;
+		}
+		div.box h2 {
+		    font-weight: 700;
+		    margin-top: 15px;
+		    line-height: 1.3;
+		    font-size: 20px;
+		}
+		div.box p{
+			margin-top: 5px;
+		}
+
+
+
+		
+
+		@media only screen and (max-width: 767px) {
+			div.container{columns: 2; max-width: 700px;}
+		}
+
+		@media only screen and (max-width: 480px) {
+			div.container{columns: 1; max-width: 450px;}
+			h1 {text-align: center;font-size: 26px;line-height: 36px;}
+		}
+
+		@media only screen and (min-width: 768px) {
+			div.container{columns: 2; max-width: 750px;}
+		}
+
+		@media only screen and (min-width: 992px) {
+			div.container{columns: 3; max-width: 970px;}
+		}
+
+		@media only screen and (min-width: 1200px) {
+			div.container{columns: 4; max-width: 1170px;}
+		}
+	</style>
+</head>
+<body>
+	<section class="grid">
+		<h1>Masonry Grid Layouts</h1>
+		<div class="container">
+			<div class="box">
+				<img src="img/blog-1.jpg" alt="blog-1">
+				<h2>1. Blog Post Title Here.</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis laborum perferendis provident.</p>
+			</div>
+			<div class="box">
+				<img src="img/blog-2.jpg" alt="blog-2">
+				<h2>2. Blog Post Title Here.</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis laborum perferendis provident rerum pariatur sed.</p>
+			</div>
+			<div class="box">
+				<img src="img/blog-3.jpg" alt="blog-3">
+				<h2>3. Blog Post Title Here.</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis laborum perferendis provident rerum pariatur sed.</p>
+			</div>
+			<div class="box">
+				<img src="img/blog-4.jpg" alt="blog-4">
+				<h2>4. Blog Post Title Here.</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis laborum perferendis provident rerum pariatur sed.</p>
+			</div>
+			<div class="box">
+				<img src="img/blog-5.jpg" alt="blog-5">
+				<h2>5. Blog Post Title Here.</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis laborum perferendis provident.</p>
+			</div>
+			<div class="box">
+				<img src="img/blog-6.jpg" alt="blog-6">
+				<h2>6. Blog Post Title Here.</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis laborum perferendis provident rerum pariatur sed.</p>
+			</div>
+			<div class="box">
+				<img src="img/blog-7.jpg" alt="blog-7">
+				<h2>7. Blog Post Title Here.</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis laborum perferendis provident rerum pariatur sed.</p>
+			</div>
+			<div class="box">
+				<img src="img/blog-8.jpg" alt="blog-8">
+				<h2>8. Blog Post Title Here.</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis laborum perferendis provident rerum pariatur sed.</p>
+			</div>
+			<div class="box">
+				<img src="img/blog-9.jpg" alt="blog-9">
+				<h2>9. Blog Post Title Here.</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis laborum perferendis provident.</p>
+			</div>
+			<div class="box">
+				<img src="img/blog-10.jpg" alt="blog-10">
+				<h2>10. Blog Post Title Here.</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis laborum perferendis provident rerum pariatur sed.</p>
+			</div>
+			<div class="box">
+				<img src="img/blog-11.jpg" alt="blog-11">
+				<h2>11. Blog Post Title Here.</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis laborum perferendis provident rerum pariatur sed.</p>
+			</div>
+			<div class="box">
+				<img src="img/blog-12.jpg" alt="blog-12">
+				<h2>12. Blog Post Title Here.</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis laborum perferendis provident rerum pariatur sed.</p>
+			</div>
+			<div class="box">
+				<img src="img/blog-13.jpg" alt="blog-13">
+				<h2>13. Blog Post Title Here.</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis laborum perferendis provident.</p>
+			</div>
+			<div class="box">
+				<img src="img/blog-14.jpg" alt="blog-14">
+				<h2>14. Blog Post Title Here.</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis laborum perferendis provident rerum pariatur sed.</p>
+			</div>
+			<div class="box">
+				<img src="img/blog-15.jpg" alt="blog-15">
+				<h2>15. Blog Post Title Here.</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis laborum perferendis provident rerum pariatur sed.</p>
+			</div>
+			<div class="box">
+				<img src="img/blog-16.jpg" alt="blog-16">
+				<h2>16. Blog Post Title Here.</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis laborum perferendis provident rerum pariatur sed.</p>
+			</div>
+			<div class="box">
+				<img src="img/blog-17.jpg" alt="blog-17">
+				<h2>17. Blog Post Title Here.</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis laborum perferendis provident rerum pariatur sed.</p>
+			</div>
+			<div class="box">
+				<img src="img/blog-18.jpg" alt="blog-18">
+				<h2>18. Blog Post Title Here.</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis laborum perferendis provident rerum pariatur sed.</p>
+			</div>
+			<div class="box">
+				<img src="img/blog-19.jpg" alt="blog-19">
+				<h2>19. Blog Post Title Here.</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis laborum perferendis provident rerum pariatur sed.</p>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

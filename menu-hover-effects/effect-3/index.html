@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Menu Hover Effect</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="nav-wrap">
+		<ul class="group" id="example-one">
+			<li class="current_page_item"><a href="#">Home</a></li>
+			<li><a href="#">Buy Tickets</a></li>
+			<li><a href="#">Group Sales</a></li>
+			<li><a href="#">Reviews</a></li>
+			<li><a href="#">The Show</a></li>
+			<li><a href="#">Videos</a></li>
+			<li><a href="#">Photos</a></li>
+			<li><a href="#">Magic Shop</a></li>
+		</ul>
+	</div>
+
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+		 
+		    var $el, leftPos, newWidth,
+		        $mainNav = $("#example-one");
+		 
+		    $mainNav.append("<li id='magic-line'></li>");
+		    var $magicLine = $("#magic-line");
+		 
+		    $magicLine
+		        .width($(".current_page_item").width())
+		        .css("left", $(".current_page_item a").position().left)
+		        .data("origLeft", $magicLine.position().left)
+		        .data("origWidth", $magicLine.width());
+		 
+		    $("#example-one li a").hover(function() {
+		        $el = $(this);
+		        leftPos = $el.position().left;
+		        newWidth = $el.parent().width();
+		        $magicLine.stop().animate({
+		            left: leftPos,
+		            width: newWidth
+		        });
+		    }, function() {
+		        $magicLine.stop().animate({
+		            left: $magicLine.data("origLeft"),
+		            width: $magicLine.data("origWidth")
+		        });
+		    });
+		});
+	</script>
+</body>
+</html>

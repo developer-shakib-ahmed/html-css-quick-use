@@ -1,0 +1,139 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+body{
+	font-family: verdana;
+	font-size: 16px;
+	line-height: 24px;
+	color: #333;
+	background-color: #fafafa;
+}
+div.container{
+	width: 100%;
+	max-width: 1170px;
+	margin: 0px auto;
+	overflow: hidden;
+	display: block;
+}
+
+section#Timeline {
+    margin: 20px 0px;
+    position: relative;
+}
+section#Timeline:after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background-color: #999;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 0 auto;
+}
+section#Timeline ul{
+	margin:0;
+	padding:0;
+}
+section#Timeline ul li{
+	position: relative;
+	margin: 30px 0px;
+	overflow: hidden;
+}
+section#Timeline ul li:nth-child(odd) div.content{
+	text-align: right;
+}
+section#Timeline ul li:nth-child(even) div.content{
+	text-align: left;
+	float: right;
+}
+section#Timeline ul li:nth-child(even) div.time{
+	float: left;
+	text-align: right;
+}
+section#Timeline ul li:nth-child(even) div.time:before{
+	left: auto;
+	right: -6px;
+}
+section#Timeline ul li div.content{
+	width: 50%;
+	float: left;
+	padding: 20px 30px;
+}
+section#Timeline ul li div.content h2{
+	margin-bottom: 15px;
+	margin-top: 8px;
+	color: #FF9800;
+}
+section#Timeline ul li div.content p{}
+section#Timeline ul li div.time{
+	width: 50%;
+	float: left;
+	padding: 20px 30px;
+	position: relative;
+}
+section#Timeline ul li div.time:before {
+    content: '';
+    position: absolute;
+    top: 35px;
+    left: -6px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #FF9800;
+    z-index: 9;
+    animation: animate 2s linear infinite;
+}
+section#Timeline ul li div.time h4 {
+    font-size: 15px;
+    background-color: #FF9800;
+    box-shadow: 0px 0px 2px 3px rgba(255, 152, 0, 0.4);
+    padding: 14px 35px;
+    border-radius: 22px;
+    display: inline-block;
+    font-weight: normal;
+    line-height: 1;
+    color: #fff;
+    margin: 0;
+}
+
+@keyframes animate{
+	0%{
+		box-shadow: 0px 0px 2px 0px rgba(255, 152, 0, 0);
+	}
+	50%{
+		box-shadow: 0px 0px 2px 6px rgba(255, 152, 0, 0.4);
+	}
+	100%{
+		box-shadow: 0px 0px 2px 0px rgba(255, 152, 0, 0);
+	}
+}
+
+
+@media only screen and (max-width: 767px) {
+	section#Timeline ul li div.content{
+		width: 100%;
+		text-align: left !important;
+	}
+	section#Timeline ul li div.time{
+		width: 100%;
+		text-align: left !important;
+		padding-bottom: 0;
+	}
+	section#Timeline:after {
+	    right: auto;
+	    left: 30px;
+	}
+	section#Timeline ul li {
+	    padding-left: 31px;
+	    flex-wrap: wrap;
+	    display: flex;
+	    flex-direction: column-reverse;
+	}
+	section#Timeline ul li:nth-child(even) div.time:before {
+	    right: auto;
+	    left: -6px;
+	}
+}

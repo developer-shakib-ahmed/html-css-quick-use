@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Horizontal Scroll</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+	<style type="text/css">
+		*{
+			margin:0;
+			padding:0;
+			box-sizing: border-box;
+		}
+		div.wrap{
+			width: 100%;
+			max-width: 1170px;
+			border:1px solid #ddd;
+			margin: 0px auto;
+		}
+		/*div.wrap ul{
+			margin:0;
+			padding:0;
+			overflow-x: scroll;
+			overflow-y: hidden;
+			white-space: nowrap;
+		}*/
+		div.wrap ul {
+		    margin: 0;
+		    padding: 0;
+		    display: flex;
+		    flex-wrap: nowrap;
+		    overflow-y: hidden;
+		}
+		div.wrap ul::-webkit-scrollbar{
+			display: none;
+		}
+		div.wrap ul li {
+		    display: inline-block;
+		    flex: 0 0 300px;
+		    height: auto;
+		    text-align: center;
+		    padding: 120px 0px;
+		}
+		div.wrap ul li:nth-child(1){
+			background-color: #899;
+		}
+		div.wrap ul li:nth-child(2){
+			background-color: #F44336;
+		}
+		div.wrap ul li:nth-child(3){
+			background-color: #9c27b0;
+		}
+		div.wrap ul li:nth-child(4){
+			background-color: #3f51b5;
+		}
+		div.wrap ul li:nth-child(5){
+			background-color: #2196f3;
+		}
+		div.wrap ul li:nth-child(6){
+			background-color: #4caf50;
+		}
+		div.wrap ul li:nth-child(7){
+			background-color: #ff9800;
+		}
+		div.wrap ul li:nth-child(8){
+			background-color: #795548;
+		}
+		div.wrap ul li:nth-child(9){
+			background-color: #ff5722;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<ul>
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+			<li>7</li>
+			<li>8</li>
+			<li>9</li>
+		</ul>
+	</div>
+</body>
+</html>
+
+<!-- https://www.youtube.com/watch?v=89KwV9r8Zsg -->
