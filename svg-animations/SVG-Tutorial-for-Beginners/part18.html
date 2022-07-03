@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scalable Vector Graphics</title>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      color: #333;
+      font-size: 16px;
+      font-family: tahoma;
+      line-height: 22px;
+    }
+
+    .wrap{
+      width: 100%;
+      max-width: 1240px;
+      margin:0 auto;
+      padding: 0px 20px;
+    }
+
+    section{
+      padding: 50px 0px;
+      text-align: center;
+    }
+
+    ul{
+      margin: 15px 0px 0px 16px;
+    }
+
+    svg {
+      width: 512px;
+      height: 512px;
+      margin: 25px auto 0;
+      display: block;
+      border: 1px solid #333;
+    }
+  </style>
+</head>
+<body>
+  
+  <section>
+    <div class="wrap">
+      <h2>SVG Defs, Symbol & Use Elements</h2>
+
+      <svg viewBox="0 0 512 512">
+
+        <defs>
+          <symbol class="group-1" id="symbol-1" viewBox="0 0 700 700">
+            <circle cx="256" cy="256" r="100" fill="orange"></circle>
+            <rect x="226" y="226" width="60" height="60" fill="red"></rect>
+          </symbol>
+
+          <symbol class="group-1" id="symbol-2" viewBox="0 0 600 600">
+            <circle cx="256" cy="256" r="100" fill="orange"></circle>
+            <rect x="226" y="226" width="60" height="60" fill="red"></rect>
+          </symbol>
+        </defs>
+
+        <use xlink:href="#symbol-1" x="100" y="200"></use>
+
+        <use xlink:href="#symbol-2" x="-50" y="-100"></use>
+      </svg>
+    </div>
+  </section>
+
+</body>
+</html>
