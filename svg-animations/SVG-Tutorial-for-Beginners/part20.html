@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scalable Vector Graphics</title>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      color: #333;
+      font-size: 16px;
+      font-family: tahoma;
+      line-height: 22px;
+    }
+
+    .wrap{
+      width: 100%;
+      max-width: 1240px;
+      margin:0 auto;
+      padding: 0px 20px;
+    }
+
+    section{
+      padding: 50px 0px;
+      text-align: center;
+    }
+
+    ul{
+      margin: 15px 0px 0px 16px;
+    }
+
+    svg {
+      width: 512px;
+      height: 512px;
+      margin: 25px auto 0;
+      display: block;
+      border: 1px solid #333;
+    }
+
+    .shape-1{
+      fill: url(#effect-1);
+    }
+
+    .shape-2{
+      fill: url(#effect-2);
+    }
+
+    .shape-3{
+      fill: url(#effect-3);
+    }
+
+    .shape-4{
+      fill: url(#effect-4);
+    }
+  </style>
+</head>
+<body>
+  
+  <section>
+    <div class="wrap">
+      <h2>SVG Gradients</h2>
+
+      <svg viewBox="0 0 512 512">
+
+        <defs>
+          <linearGradient id="effect-1">
+            <stop offset="0%" stop-color="yellowgreen" />
+            <stop offset="100%" stop-color="orange" />
+          </linearGradient>
+
+          <linearGradient id="effect-2">
+            <stop offset="0%" stop-color="orange" />
+            <stop offset="100%" stop-color="yellowgreen" />
+          </linearGradient>
+
+          <radialGradient id="effect-3">
+            <stop offset="0%" stop-color="blue" />
+            <stop offset="100%" stop-color="red" />
+          </radialGradient>
+
+          <radialGradient id="effect-4">
+            <stop offset="0%" stop-color="red" />
+            <stop offset="100%" stop-color="blue" />
+          </radialGradient>
+        </defs>
+
+        <rect class="shape-1" x="20" y="20" width="100" height="100"></rect>
+
+        <rect class="shape-2" x="20" y="140" width="100" height="100"></rect>
+
+        <rect class="shape-3" x="20" y="260" width="100" height="100"></rect>
+
+        <rect class="shape-4" x="20" y="380" width="100" height="100"></rect>
+
+      </svg>
+    </div>
+  </section>
+
+</body>
+</html>

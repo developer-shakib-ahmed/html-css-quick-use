@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scalable Vector Graphics</title>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      color: #333;
+      font-size: 16px;
+      font-family: tahoma;
+      line-height: 22px;
+    }
+
+    .wrap{
+      width: 100%;
+      max-width: 1240px;
+      margin:0 auto;
+      padding: 0px 20px;
+    }
+
+    section{
+      padding: 50px 0px;
+      text-align: center;
+    }
+
+    ul{
+      margin: 15px 0px 0px 16px;
+    }
+
+    svg {
+      width: 512px;
+      height: 512px;
+      margin: 25px auto 0;
+      display: block;
+      border: 1px solid #333;
+    }
+
+    .polygon-1{
+      fill: orange;
+      fill-rule: evenodd;
+      fill-opacity: 0.8;
+      stroke: blueviolet;
+      stroke-width: 4;
+    }
+  </style>
+</head>
+<body>
+  
+  <section>
+    <div class="wrap">
+      <h2>SVG Fill Properties</h2>
+
+      <svg viewBox="0 0 512 512">
+
+        <polygon class="polygon-1" points="100,10 40,198 190,78 10,78 160,198"></polygon>
+
+      </svg>
+    </div>
+  </section>
+
+</body>
+</html>

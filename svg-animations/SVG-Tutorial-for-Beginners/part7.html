@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scalable Vector Graphics</title>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      color: #333;
+      font-size: 16px;
+      font-family: tahoma;
+      line-height: 22px;
+    }
+
+    .wrap{
+      width: 100%;
+      max-width: 1240px;
+      margin:0 auto;
+      padding: 0px 20px;
+    }
+
+    section{
+      padding: 50px 0px;
+      text-align: center;
+    }
+
+    ul{
+      margin: 15px 0px 0px 16px;
+    }
+
+    svg {
+      width: 512px;
+      height: 512px;
+      margin: 25px auto 0;
+      display: block;
+      border: 1px solid #333;
+    }
+  </style>
+</head>
+<body>
+  
+  <section>
+    <div class="wrap">
+      <h2>SVG Ellipse Element</h2>
+
+      <svg viewBox="0 0 512 512">
+        <ellipse cx="110" cy="60" rx="100" ry="50" fill="pink" stroke="orange"></ellipse>
+      </svg>
+    </div>
+  </section>
+
+</body>
+</html>
