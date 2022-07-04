@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SVG Blob Animation</title>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family: tahoma;
+      font-size: 16px;
+      line-height: 26px;
+      color: #333;
+      background-color: #f8f8f8;
+    }
+
+    .wrap{
+      width: 100%;
+      max-width: 1240px;
+      margin:0 auto;
+      padding: 0px 20px;
+    }
+
+    h2{
+      font-size: 50px;
+      margin-bottom: 25px;
+    }
+
+    p{
+      margin-bottom: 16px;
+    }
+
+    section.about{
+      padding: 80px 0px;
+      background-color: #fff;
+    }
+
+    section.hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background-color: #42235F;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: #333;
+    }
+
+    section.hero .content {
+      display: flex;
+      align-items: center;
+      background: #fff;
+    }
+
+    section.hero .left{
+      flex: 0 0 40%;
+    }
+
+    section.hero .left img {
+      display: block;
+      max-width: 450px;
+      margin:0;
+    }
+
+    section.hero .right{
+      padding: 0px 5%;
+      flex: 0 0 60%;
+    }
+
+    section.hero h2{
+      text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+      font-size: 40px;
+      line-height: 1.1;
+    }
+
+    section.hero h3{
+      font-weight: normal;
+    }
+  </style>
+</head>
+<body>
+  
+  <section class="hero">
+    <div class="wrap">
+      <div class="content">
+        <div class="left">
+          <svg viewBox="0 0 500 500" preserveAspectRatio="none" id="blobSvg">
+            <defs>
+              <clipPath id="shape">
+                <path class="blob" fill="#00cec9">
+                  <animate 
+                  attributeName="d"
+                  dur="9000ms"
+                  repeatCount="indefinite"
+                  values="
+                  M444,309.5Q392,369,336,393Q280,417,222,408Q164,399,102.5,362.5Q41,326,41,250Q41,174,97,128Q153,82,221,56Q289,30,342.5,78.5Q396,127,446,188.5Q496,250,444,309.5Z;
+                  
+                  M422.5,314.5Q403,379,342,403.5Q281,428,211.5,432.5Q142,437,102.5,377.5Q63,318,82.5,257Q102,196,129.5,143Q157,90,221.5,69Q286,48,325.5,100.5Q365,153,403.5,201.5Q442,250,422.5,314.5Z;
+    
+                  M432,323Q424,396,352.5,412Q281,428,216.5,423.5Q152,419,126.5,361.5Q101,304,72.5,239.5Q44,175,96.5,125Q149,75,214.5,77.5Q280,80,350,93.5Q420,107,430,178.5Q440,250,432,323Z;
+    
+                  M386.5,303.5Q377,357,324.5,367Q272,377,216,391.5Q160,406,109.5,362.5Q59,319,47.5,245.5Q36,172,84,108.5Q132,45,204,74.5Q276,104,353,101.5Q430,99,413,174.5Q396,250,386.5,303.5Z;
+                  
+                  M444,309.5Q392,369,336,393Q280,417,222,408Q164,399,102.5,362.5Q41,326,41,250Q41,174,97,128Q153,82,221,56Q289,30,342.5,78.5Q396,127,446,188.5Q496,250,444,309.5Z;"></animate>
+                </path>
+            </defs>
+            <image x="0" y="0" width="100%" height="100%" clip-path="url(#shape)" xlink:href="../img/md-shakib-ahmed.jpg" preserveAspectRatio="none"></image>
+          </svg>          
+        </div>
+
+        <div class="right">
+          <h2>Developer Shakib Ahmed</h2>
+          <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus accusantium dolores perferendis vel eius animi, doloribus sequi! Libero nobis veritatis aliquam culpa qui, rem, animi possimus, cum odio aspernatur vitae ducimus optio maxime!</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="wrap">
+      <h2>About Us</h2>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus accusantium dolores perferendis vel eius animi, doloribus sequi! Libero nobis veritatis aliquam culpa qui, rem, animi possimus, cum odio aspernatur vitae ducimus optio maxime! Cumque, exercitationem! Magnam autem ut inventore, tenetur pariatur quae ullam eaque nulla tempore amet rem atque fuga architecto, iste odit corrupti similique reiciendis aspernatur nemo optio ad dolorum quis suscipit molestiae! Aliquam, voluptates maiores consectetur corporis facere nemo cumque officia deserunt. Eveniet tenetur aliquam quibusdam ex eos dicta expedita, repellendus cumque quasi ab, unde veritatis temporibus consequuntur quam placeat in soluta. Veritatis suscipit voluptatem deserunt veniam blanditiis.</p>
+
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus accusantium dolores perferendis vel eius animi, doloribus sequi! Libero nobis veritatis aliquam culpa qui, rem, animi possimus, cum odio aspernatur vitae ducimus optio maxime! Cumque, exercitationem! Magnam autem ut inventore, tenetur pariatur quae ullam eaque nulla tempore amet rem atque fuga architecto, iste odit corrupti similique reiciendis aspernatur nemo optio ad dolorum quis suscipit molestiae! Aliquam, voluptates maiores consectetur corporis facere nemo cumque officia deserunt. Eveniet tenetur aliquam quibusdam ex eos dicta expedita, repellendus cumque quasi ab, unde veritatis temporibus consequuntur quam placeat in soluta. Veritatis suscipit voluptatem deserunt veniam blanditiis.</p>
+
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis temporibus ratione tempora soluta unde harum minus? Quia dolor magni iste quae inventore qui itaque delectus error rerum sed nihil, illum quis cumque accusantium aliquid officiis id eaque repellendus in vero voluptatibus? Officiis odit suscipit quasi earum impedit quae numquam harum.</p>
+    </div>
+  </section>
+
+</body>
+</html>
