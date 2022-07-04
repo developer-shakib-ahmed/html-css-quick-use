@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS3 Clip Path Effect</title>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family: tahoma;
+      font-size: 16px;
+      line-height: 26px;
+      color: #333;
+      background-color: #f8f8f8;
+    }
+
+    .wrap{
+      width: 100%;
+      max-width: 1240px;
+      margin:0 auto;
+      padding: 0px 20px;
+    }
+
+    h2{
+      font-size: 50px;
+      margin-bottom: 35px;
+    }
+
+    p{
+      margin-bottom: 16px;
+    }
+
+    section.about{
+      padding: 80px 0px;
+      background-color: #fff;
+    }
+
+    section.hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background-color: #42235F;
+      background-image: url(../img/img-1.jpg);
+      background-position: center;
+      background-size: cover;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      clip-path: circle(25% at 50% 50%);
+      transition: 0.3s;
+    }
+
+    section.hero:hover{
+      clip-path: circle(100% at 50% 50%);
+      transition: 1s;
+    }
+
+    section.hero h2{
+      text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    section.hero h3{
+      font-weight: normal;
+    }
+  </style>
+</head>
+<body>
+  
+  <section class="hero">
+    <div class="wrap">
+      <div class="content">
+        <h2>Welcome to Ocean</h2>
+        <h3>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis temporibus ratione tempora soluta unde harum minus? Quia dolor magni iste quae inventore qui itaque delectus error rerum sed nihil, illum quis cumque accusantium aliquid officiis id eaque repellendus in vero voluptatibus? Officiis odit suscipit quasi earum impedit quae numquam harum.</h3>
+      </div>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="wrap">
+      <h2>About Us</h2>
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus accusantium dolores perferendis vel eius animi, doloribus sequi! Libero nobis veritatis aliquam culpa qui, rem, animi possimus, cum odio aspernatur vitae ducimus optio maxime! Cumque, exercitationem! Magnam autem ut inventore, tenetur pariatur quae ullam eaque nulla tempore amet rem atque fuga architecto, iste odit corrupti similique reiciendis aspernatur nemo optio ad dolorum quis suscipit molestiae! Aliquam, voluptates maiores consectetur corporis facere nemo cumque officia deserunt. Eveniet tenetur aliquam quibusdam ex eos dicta expedita, repellendus cumque quasi ab, unde veritatis temporibus consequuntur quam placeat in soluta. Veritatis suscipit voluptatem deserunt veniam blanditiis.</p>
+
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus accusantium dolores perferendis vel eius animi, doloribus sequi! Libero nobis veritatis aliquam culpa qui, rem, animi possimus, cum odio aspernatur vitae ducimus optio maxime! Cumque, exercitationem! Magnam autem ut inventore, tenetur pariatur quae ullam eaque nulla tempore amet rem atque fuga architecto, iste odit corrupti similique reiciendis aspernatur nemo optio ad dolorum quis suscipit molestiae! Aliquam, voluptates maiores consectetur corporis facere nemo cumque officia deserunt. Eveniet tenetur aliquam quibusdam ex eos dicta expedita, repellendus cumque quasi ab, unde veritatis temporibus consequuntur quam placeat in soluta. Veritatis suscipit voluptatem deserunt veniam blanditiis.</p>
+
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis temporibus ratione tempora soluta unde harum minus? Quia dolor magni iste quae inventore qui itaque delectus error rerum sed nihil, illum quis cumque accusantium aliquid officiis id eaque repellendus in vero voluptatibus? Officiis odit suscipit quasi earum impedit quae numquam harum.</p>
+    </div>
+  </section>
+
+</body>
+</html>
