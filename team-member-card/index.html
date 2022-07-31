@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team Member</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body{
+      font-family: tahoma;
+      font-size: 16px;
+      line-height: 24px;
+      color: #222;
+    }
+
+    a{
+      text-decoration: none;
+    }
+
+    .container{
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+
+    /* Member Style */
+    .team-memebers {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding: 80px 15px;
+    }
+
+    .team-memebers .member {
+      flex: 0 0 23%;
+      text-align: center;
+      background: #f5f5f5;
+    }
+
+    .team-memebers .details {
+      border-bottom: 4px solid #DE047F;
+      color: #333;
+      padding: 25px 0px;
+    }
+
+    .team-memebers .details h2 {
+      font-size: 26px;
+      transition: 0.3s;
+      margin-bottom: 12px;
+    }
+
+    .team-memebers .member:hover .details h2 {
+      color: #DE047F;
+    }
+
+    .team-memebers .member a.member-popup {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .team-memebers p {
+      margin: 0;
+    }
+
+    .team-memebers .thumb {
+      position: relative;
+      padding: 25px;
+      background: #efefef;
+    }
+
+    .team-memebers .thumb img {
+      border-radius: 50%;
+    }
+
+    .team-memebers .thumb button {
+      position: absolute;
+      z-index: 9;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%) rotateX(90deg);
+      line-height: 1.1;
+      padding: 12px 30px;
+      background: #DE047F;
+      border-radius: 100px;
+      font-weight: 600;
+      transition: 0.5s;
+      opacity: 0;
+      visibility: hidden;
+      border: 0;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .team-memebers .thumb button:hover{
+      background: #000;
+    }
+
+    .team-memebers .member:hover .thumb button {
+      visibility: visible;
+      opacity: 1;
+      transform: translateX(-50%) rotateX(0deg);
+    }
+
+    .team-memebers .thumb:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 0;
+      background: rgb(39 1 62 / 85%);
+      transition: 0.5s;
+      z-index: 1;
+    }
+
+    .team-memebers .member:hover .thumb:after {
+      height: 100%;
+    }
+
+
+
+    /* Responsive */
+    @media (max-width: 767px) {
+      .team-memebers .member {
+        flex: 0 0 100%;
+        margin: 0 auto 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="team-memebers">
+      <div class="member">
+        <a href="#member-1" class="member-popup">
+          <div class="thumb">
+            <img src="https://valuationpartners.com.au/wp-content/uploads/2022/07/Ben_Barclay.jpg" alt="Benjamin-Barclay">
+            <button>Read More</button>
+          </div>
+          <div class="details">
+            <h2>Benjamin Barclay</h2>
+            <p>National Director</p>
+          </div>
+        </a>
+      </div>
+  
+      <div class="member">
+        <a href="#member-2" class="member-popup">
+          <div class="thumb">
+            <img src="https://valuationpartners.com.au/wp-content/uploads/2022/07/Martin_Fallon.jpg" alt="Martin-Fallon">
+            <button>Read More</button>
+          </div>
+          <div class="details">
+            <h2>Martin Fallon</h2>
+            <p>National Director</p>
+          </div>
+        </a>
+      </div>
+  
+      <div class="member">
+        <a href="#member-3" class="member-popup">
+          <div class="thumb">
+            <img src="https://valuationpartners.com.au/wp-content/uploads/2022/07/Daniel_Lewis.jpg" alt="Daniel-Lewis">
+            <button>Read More</button>
+          </div>
+          <div class="details">
+            <h2>Daniel Lewis</h2>
+            <p>National Director</p>
+          </div>
+        </a>
+      </div>
+  
+      <div class="member">
+        <a href="#member-4" class="member-popup">
+          <div class="thumb">
+            <img src="https://valuationpartners.com.au/wp-content/uploads/2022/07/David_Melverton.jpg" alt="David-Melverton">
+            <button>Read More</button>
+          </div>
+          <div class="details">
+            <h2>David Melverton</h2>
+            <p>National Director</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
